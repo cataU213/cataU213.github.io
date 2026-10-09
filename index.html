@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- Hace que el sitio sea responsive -->
+  <!-- Diseño responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Cata Ullon | Portfolio</title>
@@ -15,33 +15,367 @@
 
 <body>
 
-  <!-- Banner principal -->
-  <header class="banner">
-    <img
-      src="./portada_B.png"
-      alt="Banner de Cata Ullon"
-      class="banner-img"
-    >
+  <!-- Barra superior estilo GitHub -->
+  <header class="barra-superior">
+
+    <div class="marca">
+      <span class="github-icon">●</span>
+      <strong>cataU213</strong>
+    </div>
+
+    <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
   </header>
 
-  <main class="contenedor">
 
-    <!-- Botones principales -->
-    <section class="acciones">
+  <!-- Contenido general -->
+  <main class="layout" id="inicio">
 
-      <div class="botones">
+    <!-- Columna izquierda -->
+    <aside class="perfil">
 
-        <!-- Enlace a GitHub -->
-        <a href="https://github.com/cataU213" target="_blank">
+      <!-- Foto de perfil -->
+      <img
+        src="./Aki.jpeg"
+        alt="Foto de perfil de Cata"
+        class="foto-perfil"
+      >
+
+      <h1>Cata Ullon</h1>
+
+      <p class="usuario">
+        cataU213
+      </p>
+
+      <p class="descripcion-perfil">
+        Estudiante de Ingeniería en Informática
+      </p>
+
+      <p>
+        Backend · Full Stack · Bases de Datos · APIs
+      </p>
+
+      <!-- Botones -->
+      <div class="perfil-botones">
+
+        <a
+          href="https://github.com/cataU213"
+          target="_blank"
+        >
           GitHub
         </a>
 
-        <!-- Enlace de correo -->
         <a href="mailto:akirastarr28@gmail.com">
           Email
         </a>
 
       </div>
+
+      <!-- Información -->
+      <div class="datos-perfil">
+
+        <p>📍 San Lorenzo, Paraguay</p>
+
+        <p>✉️ akirastarr28@gmail.com</p>
+
+        <p>🔗 github.com/cataU213</p>
+
+      </div>
+
+      <!-- Intereses -->
+      <div class="intereses">
+
+        <h3>☆ Intereses</h3>
+
+        <div class="chips">
+          <span>Backend</span>
+          <span>Bases de Datos</span>
+          <span>APIs</span>
+          <span>Full Stack</span>
+          <span>IA</span>
+        </div>
+
+      </div>
+
+    </aside>
+
+
+    <!-- Columna derecha -->
+    <section class="contenido">
+
+      <!-- Banner -->
+      <section class="banner">
+        <img
+          src="./portada_B.png"
+          alt="Banner de Cata Ullon"
+        >
+      </section>
+
+
+      <!-- Navegación interna -->
+      <section class="tabs">
+
+        <a href="#sobre-mi">⌂ Overview</a>
+
+        <a href="#tecnologias">◈ Tecnologías</a>
+
+        <a href="#proyectos">▣ Proyectos</a>
+
+        <a href="#contacto">✉ Contacto</a>
+
+      </section>
+
+
+      <!-- Sobre mí -->
+      <section
+        class="panel"
+        id="sobre-mi"
+      >
+
+        <h2>☾ Sobre mí</h2>
+
+        <p>
+          Soy estudiante de Ingeniería en Informática y continúo
+          fortaleciendo mis conocimientos en desarrollo Backend
+          y Full Stack.
+        </p>
+
+        <p>
+          Me interesa especialmente trabajar con bases de datos,
+          APIs, integración de sistemas y desarrollo de
+          aplicaciones web.
+        </p>
+
+      </section>
+
+
+      <!-- Tecnologías -->
+      <section
+        class="panel"
+        id="tecnologias"
+      >
+
+        <h2>✦ Tecnologías</h2>
+
+        <div class="grid-tecnologias">
+
+          <div class="grupo-tech">
+
+            <h3>Frontend</h3>
+
+            <div class="tech-lista">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React</span>
+            </div>
+
+          </div>
+
+
+          <div class="grupo-tech">
+
+            <h3>Backend</h3>
+
+            <div class="tech-lista">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>TypeScript</span>
+              <span>REST API</span>
+            </div>
+
+          </div>
+
+
+          <div class="grupo-tech">
+
+            <h3>Bases de Datos</h3>
+
+            <div class="tech-lista">
+              <span>PostgreSQL</span>
+              <span>Oracle</span>
+              <span>SQL</span>
+            </div>
+
+          </div>
+
+
+          <div class="grupo-tech">
+
+            <h3>Herramientas</h3>
+
+            <div class="tech-lista">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Proyectos -->
+      <section
+        class="panel"
+        id="proyectos"
+      >
+
+        <h2>☾ Proyectos destacados</h2>
+
+        <div class="proyectos-grid">
+
+          <!-- HilArte -->
+          <article class="proyecto-card">
+
+            <h3>🧵 HilArte</h3>
+
+            <img
+              src="./hilarte_p.png"
+              alt="Vista previa de HilArte"
+            >
+
+            <p>
+              Sitio web temático de productos artesanales
+              desarrollado con HTML, CSS y Bootstrap.
+            </p>
+
+            <div class="badges">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+            </div>
+
+            <div class="proyecto-botones">
+
+              <a
+                href="https://github.com/cataU213/hilarte-proyecto"
+                target="_blank"
+              >
+                Código
+              </a>
+
+              <a
+                href="https://catau213.github.io/hilarte-proyecto/"
+                target="_blank"
+              >
+                Ver sitio
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PetCare -->
+          <article class="proyecto-card">
+
+            <h3>🐾 PetCare</h3>
+
+            <img
+              src="./CuidadoMascotas.png"
+              alt="Vista previa de PetCare"
+            >
+
+            <p>
+              Proyecto académico colaborativo para la gestión
+              de solicitudes de adopción de mascotas.
+            </p>
+
+            <div class="badges">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>Vite</span>
+              <span>CSS</span>
+            </div>
+
+            <div class="proyecto-botones">
+
+              <a
+                href="https://github.com/cataU213/petcare-frontend"
+                target="_blank"
+              >
+                Código
+              </a>
+
+              <a
+                href="https://catau213.github.io/petcare-frontend/"
+                target="_blank"
+              >
+                Ver sitio
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- Aprendizaje -->
+      <section class="panel">
+
+        <h2>✦ Actualmente aprendiendo</h2>
+
+        <div class="aprendiendo">
+
+          <span>✓ Desarrollo Backend</span>
+          <span>✓ Arquitectura Full Stack</span>
+          <span>✓ Bases de Datos</span>
+          <span>✓ Integración de APIs</span>
+          <span>✓ Git y GitHub</span>
+
+        </div>
+
+      </section>
+
+
+      <!-- Contacto -->
+      <section
+        class="panel contacto"
+        id="contacto"
+      >
+
+        <h2>☾ Contacto</h2>
+
+        <p>
+          Podés contactarme por correo o visitar mi perfil de GitHub.
+        </p>
+
+        <div class="perfil-botones">
+
+          <a href="mailto:akirastarr28@gmail.com">
+            Email
+          </a>
+
+          <a
+            href="https://github.com/cataU213"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- Frase final -->
+      <footer>
+
+        ☾ Aprendiendo, creando y mejorando un proyecto a la vez. ✦
+
+      </footer>
 
     </section>
 
