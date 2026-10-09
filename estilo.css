@@ -747,6 +747,82 @@ footer {
   color: #f3ead9 !important;
 }
 
+/* =========================
+   BOTONES DE NAVEGACIÓN INTERNA
+   Overview · Tecnologías · Proyectos · Contacto
+========================= */
+
+.tabs a {
+  background: #17363a !important;
+  border-color: #8f6a3d !important;
+  color: #f5e7cf !important;
+}
+
+.tabs a:nth-child(1) {
+  background: #6f4a2d !important;
+}
+
+.tabs a:nth-child(2) {
+  background: #2d5d59 !important;
+}
+
+.tabs a:nth-child(3) {
+  background: #6f5b2f !important;
+}
+
+.tabs a:nth-child(4) {
+  background: #40596a !important;
+}
+
+.tabs a:hover {
+  background: #d39a55 !important;
+  color: #102022 !important;
+}
+
+
+/* =========================
+   BOTONES DE PROYECTOS
+========================= */
+
+.proyecto-botones a {
+  background: #17363a !important;
+  border-color: #8f6a3d !important;
+  color: #f5e7cf !important;
+}
+
+/* Primer botón: Código */
+.proyecto-botones a:first-child {
+  background: #40596a !important;
+}
+
+/* Segundo botón: Ver sitio */
+.proyecto-botones a:last-child {
+  background: #8f4f3f !important;
+}
+
+/* Hover */
+.proyecto-botones a:hover {
+  background: #d39a55 !important;
+  color: #102022 !important;
+}
+
+
+/* =========================
+   BOTÓN PERFIL / CONTACTO
+========================= */
+
+.perfil-botones a,
+.editar-perfil {
+  background: #2d5d59 !important;
+  border-color: #8f6a3d !important;
+  color: #f5e7cf !important;
+}
+
+.perfil-botones a:hover,
+.editar-perfil:hover {
+  background: #d39a55 !important;
+  color: #102022 !important;
+}
 /* Efecto al pasar el mouse */
 .grupo-tech .tech-lista span:hover {
   background: #d39a55 !important;
