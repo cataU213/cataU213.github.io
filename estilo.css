@@ -23,17 +23,13 @@ body {
   color: #eee5d5;
 
   /* Fondo gótico principal */
-  background:
-    linear-gradient(
-      rgba(4, 15, 17, 0.80),
-      rgba(4, 15, 17, 0.88)
-    ),
-    url("./fondo.png");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+ /* Fondo más visible y menos oscuro */
+background:
+  linear-gradient(
+    rgba(5, 18, 20, 0.42),
+    rgba(5, 18, 20, 0.52)
+  ),
+  url("./fondo.png");
 
 
 /* ------------------------------
@@ -768,4 +764,33 @@ footer {
 
   border-radius: 50% !important;
   border: 2px solid #c58a49;
+}
+
+/* Colores para etiquetas de tecnologías */
+.tech-lista span {
+  padding: 7px 12px;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  color: #f7ead6;
+
+  background: linear-gradient(
+    135deg,
+    #1f3a3b,
+    #2c4a46
+  );
+
+  border: 1px solid rgba(214, 163, 94, 0.45);
+}
+
+/* Variación visual al pasar el mouse */
+.tech-lista span:hover {
+  background: linear-gradient(
+    135deg,
+    #b7793d,
+    #d09a59
+  );
+
+  color: #0b1718;
 }
