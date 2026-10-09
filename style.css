@@ -1,19 +1,19 @@
-/* Configuración general de la página */
+/* Reinicia márgenes y tamaños */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fondo principal del portfolio */
+/* Fondo general del portfolio */
 body {
   min-height: 100vh;
   font-family: Georgia, "Times New Roman", serif;
-  color: #f4ead8;
+  color: #f3e6cf;
 
-  /* Fondo gótico a toda la página */
-  background-image:
-    linear-gradient(rgba(8, 18, 18, 0.35), rgba(8, 18, 18, 0.35)),
+  /* Imagen de fondo con una capa oscura */
+  background:
+    linear-gradient(rgba(8, 16, 16, 0.30), rgba(8, 16, 16, 0.30)),
     url("fondo.png");
 
   background-size: cover;
@@ -24,49 +24,109 @@ body {
 
 /* Contenedor principal */
 .contenedor {
-  width: min(1100px, 92%);
+  width: min(1180px, 92%);
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 70px 0;
 }
 
-/* Bloque inicial */
-.presentacion {
+/* Portada */
+.hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Caja central */
+.hero-contenido {
+  width: 100%;
+  max-width: 900px;
   text-align: center;
-  padding: 60px 30px;
+  padding: 70px 40px;
 
-  /* Fondo translúcido para que el texto se lea bien */
-  background: rgba(10, 20, 20, 0.55);
+  /* Efecto cristal oscuro */
+  background: rgba(12, 24, 23, 0.64);
+  backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(210, 160, 90, 0.45);
-  border-radius: 18px;
-  backdrop-filter: blur(6px);
+  border: 1px solid rgba(218, 173, 103, 0.42);
+  border-radius: 22px;
 }
 
-/* Nombre principal */
-.presentacion h1 {
-  font-size: 3rem;
-  color: #e8c58c;
+/* Texto pequeño superior */
+.subtitulo {
+  color: #d7a665;
+  letter-spacing: 3px;
   margin-bottom: 18px;
 }
 
-/* Texto secundario */
-.presentacion p {
-  font-size: 1.1rem;
-  margin: 8px 0;
-  color: #f3e6cf;
+/* Nombre principal */
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: #e7c184;
+  margin-bottom: 18px;
 }
 
-/* Adaptación para celular */
+/* Título profesional */
+.hero h2 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: normal;
+  color: #f4ead9;
+  margin-bottom: 18px;
+}
+
+/* Descripción */
+.descripcion {
+  font-size: 1.1rem;
+  color: #d9cbb7;
+  margin-bottom: 32px;
+}
+
+/* Contenedor de botones */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Botones */
+.botones a {
+  text-decoration: none;
+  color: #f7ead6;
+  background: rgba(11, 19, 19, 0.72);
+
+  border: 1px solid #b77c49;
+  border-radius: 10px;
+
+  padding: 12px 28px;
+  min-width: 140px;
+
+  transition: 0.25s ease;
+}
+
+/* Efecto al pasar el mouse */
+.botones a:hover {
+  background: #b77c49;
+  color: #111;
+  transform: translateY(-2px);
+}
+
+/* Ajuste para celulares */
 @media (max-width: 700px) {
-  .presentacion {
-    padding: 40px 20px;
+  .contenedor {
+    width: 94%;
+    padding: 30px 0;
   }
 
-  .presentacion h1 {
-    font-size: 2.2rem;
+  .hero {
+    min-height: auto;
   }
 
-  .presentacion p {
+  .hero-contenido {
+    padding: 45px 22px;
+  }
+
+  .descripcion {
     font-size: 1rem;
   }
 }
