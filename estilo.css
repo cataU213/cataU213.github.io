@@ -11,9 +11,9 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   color: #f3e6cf;
 
-  /* Imagen de fondo con una capa oscura */
+  /* Fondo gótico del sitio */
   background:
-    linear-gradient(rgba(8, 16, 16, 0.30), rgba(8, 16, 16, 0.30)),
+    linear-gradient(rgba(8, 16, 16, 0.32), rgba(8, 16, 16, 0.32)),
     url("fondo.png");
 
   background-size: cover;
@@ -22,84 +22,58 @@ body {
   background-attachment: fixed;
 }
 
+/* Banner principal */
+.banner {
+  width: min(1180px, 94%);
+  margin: 24px auto 0;
+}
+
+/* Imagen del banner */
+.banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  /* Bordes suaves para integrarlo con el diseño */
+  border: 1px solid rgba(218, 173, 103, 0.45);
+  border-radius: 14px;
+}
+
 /* Contenedor principal */
 .contenedor {
-  width: min(1180px, 92%);
+  width: min(1180px, 94%);
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 22px 0 70px;
 }
 
-/* Portada */
-.hero {
-  min-height: 72vh;
+/* Sección de botones */
+.acciones {
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-/* Caja central */
-.hero-contenido {
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-  padding: 70px 40px;
-
-  /* Efecto cristal oscuro */
-  background: rgba(12, 24, 23, 0.64);
-  backdrop-filter: blur(10px);
-
-  border: 1px solid rgba(218, 173, 103, 0.42);
-  border-radius: 22px;
-}
-
-/* Texto pequeño superior */
-.subtitulo {
-  color: #d7a665;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
-}
-
-/* Nombre principal */
-.hero h1 {
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  color: #e7c184;
-  margin-bottom: 18px;
-}
-
-/* Título profesional */
-.hero h2 {
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  font-weight: normal;
-  color: #f4ead9;
-  margin-bottom: 18px;
-}
-
-/* Descripción */
-.descripcion {
-  font-size: 1.1rem;
-  color: #d9cbb7;
-  margin-bottom: 32px;
 }
 
 /* Contenedor de botones */
 .botones {
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
-/* Botones */
+/* Botones principales */
 .botones a {
+  min-width: 180px;
+  padding: 13px 30px;
+
+  text-align: center;
   text-decoration: none;
-  color: #f7ead6;
-  background: rgba(11, 19, 19, 0.72);
+
+  color: #f3e6cf;
+  background: rgba(10, 22, 21, 0.78);
 
   border: 1px solid #b77c49;
-  border-radius: 10px;
-
-  padding: 12px 28px;
-  min-width: 140px;
+  border-radius: 8px;
 
   transition: 0.25s ease;
 }
@@ -111,22 +85,28 @@ body {
   transform: translateY(-2px);
 }
 
-/* Ajuste para celulares */
+/* Ajustes para celulares */
 @media (max-width: 700px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .banner {
+    width: 96%;
+    margin-top: 12px;
+  }
+
   .contenedor {
-    width: 94%;
-    padding: 30px 0;
+    width: 96%;
+    padding-top: 16px;
   }
 
-  .hero {
-    min-height: auto;
+  .botones {
+    gap: 12px;
   }
 
-  .hero-contenido {
-    padding: 45px 22px;
-  }
-
-  .descripcion {
-    font-size: 1rem;
+  .botones a {
+    width: 100%;
+    min-width: 0;
   }
 }
