@@ -1,6 +1,6 @@
-/* ------------------------------
+/* =========================
    CONFIGURACIÓN GENERAL
------------------------------- */
+========================= */
 
 * {
   margin: 0;
@@ -14,38 +14,35 @@ html {
 
 body {
   min-height: 100vh;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   color: #eee5d5;
 
-  /* Fondo gótico principal */
+  /* Fondo principal */
   background:
     linear-gradient(
-      rgba(4, 15, 17, 0.80),
-      rgba(4, 15, 17, 0.88)
+      rgba(4, 15, 17, 0.76),
+      rgba(4, 15, 17, 0.86)
     ),
     url("./fondo.png");
 
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 
-/* ------------------------------
+/* =========================
    BARRA SUPERIOR
------------------------------- */
+========================= */
 
 .barra-superior {
   position: sticky;
   top: 0;
   z-index: 100;
 
-  min-height: 62px;
+  width: 100%;
+  min-height: 64px;
 
   display: flex;
   align-items: center;
@@ -53,228 +50,208 @@ body {
 
   padding: 0 4%;
 
-  background: rgba(5, 16, 19, 0.94);
+  background: rgba(4, 15, 18, 0.96);
+  border-bottom: 1px solid rgba(201, 139, 75, 0.35);
 
-  border-bottom:
-    1px solid rgba(200, 144, 72, 0.35);
-
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
 }
 
 .marca {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 
-  font-size: 1.05rem;
+  font-size: 1rem;
+  color: #f1e7d7;
 }
 
 .github-icon {
-  color: #d89b56;
+  color: #d09a59;
 }
 
 .menu {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 6px;
 }
 
 .menu a {
   padding: 20px 14px;
 
-  color: #d9d9d9;
+  color: #d7dddb;
   text-decoration: none;
 
-  border-bottom:
-    2px solid transparent;
+  border-bottom: 2px solid transparent;
+
+  transition: 0.2s;
 }
 
 .menu a:hover {
-  color: #e6b56f;
-
-  border-bottom-color: #d18943;
+  color: #e7bd82;
+  border-bottom-color: #c98543;
 }
 
 
-/* ------------------------------
+/* =========================
    ESTRUCTURA PRINCIPAL
------------------------------- */
+========================= */
 
 .layout {
   width: min(1450px, 96%);
-
-  margin: 28px auto 70px;
+  margin: 26px auto 60px;
 
   display: grid;
 
-  grid-template-columns:
-    290px
-    minmax(0, 1fr);
+  /* Perfil izquierda + contenido derecha */
+  grid-template-columns: 285px minmax(0, 1fr);
 
   gap: 20px;
 }
 
 
-/* ------------------------------
+/* =========================
    PERFIL LATERAL
------------------------------- */
+========================= */
 
 .perfil {
   align-self: start;
 
-  padding: 24px;
+  padding: 22px;
 
-  border:
-    1px solid rgba(205, 146, 75, 0.45);
+  background: rgba(5, 20, 23, 0.88);
 
+  border: 1px solid rgba(198, 138, 70, 0.45);
   border-radius: 14px;
 
-  background:
-    rgba(5, 20, 23, 0.86);
+  backdrop-filter: blur(8px);
 
-  box-shadow:
-    0 15px 40px
-    rgba(0, 0, 0, 0.28);
-
-  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
+/* Foto circular */
 .foto-perfil {
   display: block;
 
-  width: 190px;
-  height: 190px;
+  width: 180px;
+  height: 180px;
 
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
 
   border-radius: 50%;
 
   object-fit: cover;
 
-  border:
-    2px solid #c68b4a;
+  border: 2px solid #c48948;
 }
 
 .perfil h1 {
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  margin-bottom: 4px;
 
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 2rem;
 
-  color: #efd29c;
-
-  margin-bottom: 3px;
+  color: #edcf99;
 }
 
 .usuario {
-  color: #8e9ca0;
+  margin-bottom: 18px;
 
-  margin-bottom: 20px;
+  color: #89989b;
 }
 
 .descripcion-perfil {
   margin-bottom: 8px;
 
-  color: #f1e7d5;
+  color: #f1e6d3;
 }
 
-.perfil > p {
-  line-height: 1.55;
+.perfil p {
+  line-height: 1.5;
 }
 
 
-/* ------------------------------
-   BOTONES DEL PERFIL
------------------------------- */
+/* =========================
+   BOTONES PERFIL
+========================= */
 
 .perfil-botones {
   display: flex;
+  flex-wrap: wrap;
 
   gap: 10px;
 
-  margin: 22px 0;
-
-  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
 .perfil-botones a {
   flex: 1;
 
-  min-width: 100px;
+  min-width: 105px;
 
-  padding: 10px 15px;
+  padding: 10px 14px;
 
   text-align: center;
 
-  color: #f1dfc0;
-
   text-decoration: none;
 
-  background:
-    rgba(13, 35, 38, 0.95);
+  color: #efddc0;
 
-  border:
-    1px solid rgba(205, 143, 69, 0.58);
+  background: rgba(12, 32, 35, 0.92);
 
+  border: 1px solid rgba(198, 138, 69, 0.55);
   border-radius: 8px;
 
   transition: 0.25s;
 }
 
 .perfil-botones a:hover {
-  background: #b97a3f;
-
-  color: #0b1718;
+  background: #b7783e;
+  color: #071517;
 
   transform: translateY(-2px);
 }
 
 
-/* ------------------------------
-   DATOS DEL PERFIL
------------------------------- */
+/* =========================
+   DATOS PERFIL
+========================= */
 
 .datos-perfil {
-  padding: 18px 0;
+  padding: 15px 0;
 
-  border-top:
-    1px solid rgba(255, 255, 255, 0.08);
-
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .datos-perfil p {
-  margin: 11px 0;
+  margin: 10px 0;
 
-  color: #cbd3d1;
+  font-size: 0.9rem;
 
-  font-size: 0.92rem;
+  color: #cbd4d1;
 
   word-break: break-word;
 }
 
 
-/* ------------------------------
+/* =========================
    INTERESES
------------------------------- */
+========================= */
 
 .intereses {
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
 .intereses h3 {
+  margin-bottom: 12px;
+
   font-family: Georgia, serif;
 
-  color: #dbab69;
-
-  margin-bottom: 14px;
+  color: #d7a466;
 }
 
 .chips {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 7px;
@@ -283,36 +260,35 @@ body {
 .chips span {
   padding: 6px 10px;
 
-  border-radius: 20px;
+  font-size: 0.8rem;
 
   color: #dce3e1;
 
-  background:
-    rgba(28, 49, 52, 0.88);
+  background: rgba(28, 49, 52, 0.88);
 
-  font-size: 0.82rem;
+  border-radius: 20px;
 }
 
 
-/* ------------------------------
-   COLUMNA DERECHA
------------------------------- */
+/* =========================
+   CONTENIDO DERECHO
+========================= */
 
 .contenido {
   min-width: 0;
 }
 
 
-/* ------------------------------
+/* =========================
    BANNER
------------------------------- */
+========================= */
 
 .banner {
+  width: 100%;
+
   overflow: hidden;
 
-  border:
-    1px solid rgba(205, 146, 75, 0.50);
-
+  border: 1px solid rgba(199, 140, 71, 0.48);
   border-radius: 13px;
 }
 
@@ -320,20 +296,20 @@ body {
   display: block;
 
   width: 100%;
-
   height: auto;
+
+  object-fit: cover;
 }
 
 
-/* ------------------------------
-   NAVEGACIÓN INTERNA
------------------------------- */
+/* =========================
+   PESTAÑAS
+========================= */
 
 .tabs {
   display: grid;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   gap: 10px;
 
@@ -341,140 +317,118 @@ body {
 }
 
 .tabs a {
-  padding: 15px 10px;
+  padding: 14px 10px;
 
   text-align: center;
 
-  color: #dde3df;
-
   text-decoration: none;
 
-  background:
-    rgba(4, 20, 23, 0.90);
+  color: #dce1df;
 
-  border:
-    1px solid rgba(195, 139, 70, 0.34);
+  background: rgba(5, 21, 24, 0.92);
 
+  border: 1px solid rgba(197, 139, 70, 0.34);
   border-radius: 9px;
 
   transition: 0.2s;
 }
 
 .tabs a:hover {
-  color: #f2c684;
-
-  border-color: #b87738;
+  color: #efc784;
+  border-color: #bb7a3d;
 }
 
 
-/* ------------------------------
+/* =========================
    PANELES
------------------------------- */
+========================= */
 
 .panel {
   margin-top: 14px;
 
-  padding: 23px;
+  padding: 22px;
 
-  background:
-    rgba(4, 20, 23, 0.88);
+  background: rgba(5, 20, 23, 0.90);
 
-  border:
-    1px solid rgba(192, 140, 75, 0.38);
-
+  border: 1px solid rgba(193, 137, 69, 0.38);
   border-radius: 13px;
 
-  backdrop-filter: blur(9px);
-
-  box-shadow:
-    0 12px 30px
-    rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(8px);
 }
 
 .panel h2 {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 
-  color: #e4b779;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 1.55rem;
+  color: #e2b475;
 }
 
 .panel p {
-  color: #d5dcda;
+  margin-bottom: 12px;
 
   line-height: 1.65;
 
-  margin-bottom: 12px;
+  color: #d3dcda;
 }
 
 
-/* ------------------------------
+/* =========================
    TECNOLOGÍAS
------------------------------- */
+========================= */
 
 .grid-tecnologias {
   display: grid;
 
-  grid-template-columns:
-    repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 12px;
 }
 
 .grupo-tech {
-  padding: 17px;
+  padding: 16px;
 
-  border:
-    1px solid rgba(194, 137, 66, 0.32);
+  background: rgba(9, 29, 32, 0.78);
 
+  border: 1px solid rgba(194, 137, 66, 0.31);
   border-radius: 10px;
-
-  background:
-    rgba(8, 29, 32, 0.75);
 }
 
 .grupo-tech h3 {
   margin-bottom: 12px;
 
-  color: #f0e1c6;
+  color: #efe0c6;
 }
 
 .tech-lista {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 8px;
 }
 
 .tech-lista span {
-  padding: 7px 11px;
+  padding: 7px 10px;
 
-  background:
-    rgba(30, 53, 56, 0.90);
+  font-size: 0.84rem;
+
+  color: #dce1df;
+
+  background: rgba(31, 52, 54, 0.92);
 
   border-radius: 6px;
-
-  color: #dadfdd;
-
-  font-size: 0.86rem;
 }
 
 
-/* ------------------------------
+/* =========================
    PROYECTOS
------------------------------- */
+========================= */
 
 .proyectos-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 16px;
 }
@@ -482,56 +436,52 @@ body {
 .proyecto-card {
   padding: 15px;
 
-  background:
-    rgba(7, 27, 30, 0.92);
+  background: rgba(7, 27, 30, 0.94);
 
-  border:
-    1px solid rgba(196, 138, 66, 0.37);
-
+  border: 1px solid rgba(196, 138, 67, 0.37);
   border-radius: 11px;
+
+  overflow: hidden;
 }
 
 .proyecto-card h3 {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
-  color: #f0d7aa;
+  color: #efd6a7;
 }
 
 .proyecto-card img {
   display: block;
 
   width: 100%;
-
-  aspect-ratio: 16 / 8;
+  height: 190px;
 
   object-fit: cover;
 
-  border-radius: 8px;
-
   margin-bottom: 14px;
+
+  border-radius: 8px;
 }
 
 .badges {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 6px;
 
-  margin-top: 14px;
+  margin-top: 13px;
 }
 
 .badges span {
   padding: 5px 8px;
 
-  font-size: 0.76rem;
+  font-size: 0.75rem;
+
+  color: #ebdcc3;
+
+  background: rgba(40, 57, 58, 0.9);
 
   border-radius: 5px;
-
-  color: #eddcc1;
-
-  background:
-    rgba(41, 58, 59, 0.88);
 }
 
 .proyecto-botones {
@@ -539,53 +489,50 @@ body {
 
   gap: 8px;
 
-  margin-top: 16px;
+  margin-top: 15px;
 }
 
 .proyecto-botones a {
   flex: 1;
 
-  padding: 9px 10px;
+  padding: 9px;
 
   text-align: center;
 
   text-decoration: none;
 
+  color: #ecddc4;
+
+  border: 1px solid rgba(199, 141, 69, 0.5);
   border-radius: 7px;
-
-  color: #eedfc4;
-
-  border:
-    1px solid rgba(199, 141, 69, 0.50);
 
   transition: 0.2s;
 }
 
 .proyecto-botones a:hover {
   background: #a96e38;
-
   color: #071517;
 }
 
 
-/* ------------------------------
+/* =========================
    APRENDIZAJE
------------------------------- */
+========================= */
 
 .aprendiendo {
   display: grid;
 
-  gap: 11px;
+  gap: 10px;
 }
 
 .aprendiendo span {
-  color: #ccd7d4;
+  color: #ccd6d3;
 }
 
 
-/* ------------------------------
+/* =========================
    CONTACTO
------------------------------- */
+========================= */
 
 .contacto {
   text-align: center;
@@ -596,33 +543,30 @@ body {
 }
 
 .contacto .perfil-botones a {
-  flex: 0 1 190px;
+  flex: 0 1 180px;
 }
 
 
-/* ------------------------------
-   PIE DE PÁGINA
------------------------------- */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-  margin: 25px 0;
+  margin: 24px 0;
 
   padding: 20px;
 
   text-align: center;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-  color: #d5a462;
+  color: #d2a260;
 }
 
 
-/* ------------------------------
+/* =========================
    TABLET
------------------------------- */
+========================= */
 
 @media (max-width: 1000px) {
 
@@ -645,9 +589,9 @@ footer {
 }
 
 
-/* ------------------------------
+/* =========================
    CELULAR
------------------------------- */
+========================= */
 
 @media (max-width: 700px) {
 
@@ -656,11 +600,13 @@ footer {
   }
 
   .barra-superior {
-    padding: 12px 4%;
+    position: static;
 
     flex-direction: column;
 
     gap: 10px;
+
+    padding: 12px 4%;
   }
 
   .menu {
@@ -682,13 +628,12 @@ footer {
   }
 
   .foto-perfil {
-    width: 150px;
-    height: 150px;
+    width: 145px;
+    height: 145px;
   }
 
   .tabs {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-tecnologias {
@@ -697,6 +642,10 @@ footer {
 
   .proyectos-grid {
     grid-template-columns: 1fr;
+  }
+
+  .proyecto-card img {
+    height: auto;
   }
 
 }
