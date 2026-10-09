@@ -755,3 +755,17 @@ footer {
   line-height: 1.6;
 }
 }
+
+/* Corrección final de la foto de perfil */
+.foto-perfil {
+  width: 190px !important;
+  height: 190px !important;
+
+  object-fit: cover !important;
+
+  /* Centra principalmente tu rostro */
+  object-position: 58% 8% !important;
+
+  border-radius: 50% !important;
+  border: 2px solid #c58a49;
+}
