@@ -22,10 +22,10 @@ body {
   background-attachment: fixed;
 }
 
-/* Banner principal */
+/* Banner ocupando casi todo el ancho */
 .banner {
-  width: min(720px, 88%);
-  margin: 24px auto 0;
+  width: 96%;
+  margin: 18px auto 0;
 }
 
 /* Imagen del banner */
