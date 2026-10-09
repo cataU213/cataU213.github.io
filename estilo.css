@@ -712,5 +712,44 @@ footer {
   .proyectos-grid {
     grid-template-columns: 1fr;
   }
+}
 
+/* =========================
+   COLORES DE TECNOLOGÍAS
+   Esta sección debe ir al FINAL
+========================= */
+
+/* Frontend - terracota */
+.grupo-tech:nth-child(1) .tech-lista span {
+  background: #8f4f3f !important;
+  border-color: #c77b5d !important;
+  color: #fff1df !important;
+}
+
+/* Backend - verde petróleo */
+.grupo-tech:nth-child(2) .tech-lista span {
+  background: #26605c !important;
+  border-color: #4c9288 !important;
+  color: #f0eadb !important;
+}
+
+/* Bases de Datos - dorado / mostaza */
+.grupo-tech:nth-child(3) .tech-lista span {
+  background: #80652f !important;
+  border-color: #c49b50 !important;
+  color: #fff2d4 !important;
+}
+
+/* Herramientas - azul grisáceo */
+.grupo-tech:nth-child(4) .tech-lista span {
+  background: #40596a !important;
+  border-color: #68869a !important;
+  color: #f3ead9 !important;
+}
+
+/* Efecto al pasar el mouse */
+.grupo-tech .tech-lista span:hover {
+  background: #d39a55 !important;
+  color: #102022 !important;
+  transform: translateY(-2px);
 }
