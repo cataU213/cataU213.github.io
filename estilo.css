@@ -22,21 +22,24 @@ body {
   background-attachment: fixed;
 }
 
-/* Banner ocupando casi todo el ancho */
+/* Banner de borde a borde */
 .banner {
   width: 100%;
   margin: 0;
+  padding: 0;
 }
 
-/* Imagen del banner */
+/* Imagen ocupando todo el ancho */
 .banner-img {
   display: block;
   width: 100%;
   height: auto;
 
-  border: 1px solid rgba(218, 173, 103, 0.45);
-  border-radius: 12px;
+  /* Sin espacios ni bordes laterales */
+  border: none;
+  border-radius: 0;
 }
+
 
   /* Bordes suaves para integrarlo con el diseño */
   border: 1px solid rgba(218, 173, 103, 0.45);
