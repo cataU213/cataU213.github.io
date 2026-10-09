@@ -1,119 +1,702 @@
-/* Reinicia márgenes y tamaños */
+/* ------------------------------
+   CONFIGURACIÓN GENERAL
+------------------------------ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fondo general del portfolio */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #f3e6cf;
 
-  /* Fondo gótico del sitio */
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #eee5d5;
+
+  /* Fondo gótico principal */
   background:
-    linear-gradient(rgba(8, 16, 16, 0.32), rgba(8, 16, 16, 0.32)),
-    url("fondo.png");
+    linear-gradient(
+      rgba(4, 15, 17, 0.80),
+      rgba(4, 15, 17, 0.88)
+    ),
+    url("./fondo.png");
 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Banner de borde a borde */
-.banner {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+
+/* ------------------------------
+   BARRA SUPERIOR
+------------------------------ */
+
+.barra-superior {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4%;
+
+  background: rgba(5, 16, 19, 0.94);
+
+  border-bottom:
+    1px solid rgba(200, 144, 72, 0.35);
+
+  backdrop-filter: blur(12px);
 }
 
-/* Imagen ocupando todo el ancho */
-.banner-img {
-  display: block;
-  width: 100%;
-  height: auto;
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-  /* Sin espacios ni bordes laterales */
-  border: none;
-  border-radius: 0;
+  font-size: 1.05rem;
+}
+
+.github-icon {
+  color: #d89b56;
+}
+
+.menu {
+  display: flex;
+  gap: 8px;
+}
+
+.menu a {
+  padding: 20px 14px;
+
+  color: #d9d9d9;
+  text-decoration: none;
+
+  border-bottom:
+    2px solid transparent;
+}
+
+.menu a:hover {
+  color: #e6b56f;
+
+  border-bottom-color: #d18943;
 }
 
 
-  /* Bordes suaves para integrarlo con el diseño */
-  border: 1px solid rgba(218, 173, 103, 0.45);
+/* ------------------------------
+   ESTRUCTURA PRINCIPAL
+------------------------------ */
+
+.layout {
+  width: min(1450px, 96%);
+
+  margin: 28px auto 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    290px
+    minmax(0, 1fr);
+
+  gap: 20px;
+}
+
+
+/* ------------------------------
+   PERFIL LATERAL
+------------------------------ */
+
+.perfil {
+  align-self: start;
+
+  padding: 24px;
+
+  border:
+    1px solid rgba(205, 146, 75, 0.45);
+
   border-radius: 14px;
+
+  background:
+    rgba(5, 20, 23, 0.86);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(10px);
 }
 
-/* Contenedor principal */
-.contenedor {
-  width: min(1180px, 94%);
-  margin: 0 auto;
-  padding: 22px 0 70px;
+.foto-perfil {
+  display: block;
+
+  width: 190px;
+  height: 190px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border:
+    2px solid #c68b4a;
 }
 
-/* Sección de botones */
-.acciones {
+.perfil h1 {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 2rem;
+
+  color: #efd29c;
+
+  margin-bottom: 3px;
+}
+
+.usuario {
+  color: #8e9ca0;
+
+  margin-bottom: 20px;
+}
+
+.descripcion-perfil {
+  margin-bottom: 8px;
+
+  color: #f1e7d5;
+}
+
+.perfil > p {
+  line-height: 1.55;
+}
+
+
+/* ------------------------------
+   BOTONES DEL PERFIL
+------------------------------ */
+
+.perfil-botones {
   display: flex;
-  justify-content: center;
-}
 
-/* Contenedor de botones */
-.botones {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
+  gap: 10px;
+
+  margin: 22px 0;
+
   flex-wrap: wrap;
 }
 
-/* Botones principales */
-.botones a {
-  min-width: 180px;
-  padding: 13px 30px;
+.perfil-botones a {
+  flex: 1;
+
+  min-width: 100px;
+
+  padding: 10px 15px;
 
   text-align: center;
+
+  color: #f1dfc0;
+
   text-decoration: none;
 
-  color: #f3e6cf;
-  background: rgba(10, 22, 21, 0.78);
+  background:
+    rgba(13, 35, 38, 0.95);
 
-  border: 1px solid #b77c49;
+  border:
+    1px solid rgba(205, 143, 69, 0.58);
+
   border-radius: 8px;
 
-  transition: 0.25s ease;
+  transition: 0.25s;
 }
 
-/* Efecto al pasar el mouse */
-.botones a:hover {
-  background: #b77c49;
-  color: #111;
+.perfil-botones a:hover {
+  background: #b97a3f;
+
+  color: #0b1718;
+
   transform: translateY(-2px);
 }
 
-/* Ajustes para celulares */
+
+/* ------------------------------
+   DATOS DEL PERFIL
+------------------------------ */
+
+.datos-perfil {
+  padding: 18px 0;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.datos-perfil p {
+  margin: 11px 0;
+
+  color: #cbd3d1;
+
+  font-size: 0.92rem;
+
+  word-break: break-word;
+}
+
+
+/* ------------------------------
+   INTERESES
+------------------------------ */
+
+.intereses {
+  margin-top: 22px;
+}
+
+.intereses h3 {
+  font-family: Georgia, serif;
+
+  color: #dbab69;
+
+  margin-bottom: 14px;
+}
+
+.chips {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.chips span {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  color: #dce3e1;
+
+  background:
+    rgba(28, 49, 52, 0.88);
+
+  font-size: 0.82rem;
+}
+
+
+/* ------------------------------
+   COLUMNA DERECHA
+------------------------------ */
+
+.contenido {
+  min-width: 0;
+}
+
+
+/* ------------------------------
+   BANNER
+------------------------------ */
+
+.banner {
+  overflow: hidden;
+
+  border:
+    1px solid rgba(205, 146, 75, 0.50);
+
+  border-radius: 13px;
+}
+
+.banner img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+}
+
+
+/* ------------------------------
+   NAVEGACIÓN INTERNA
+------------------------------ */
+
+.tabs {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin: 14px 0;
+}
+
+.tabs a {
+  padding: 15px 10px;
+
+  text-align: center;
+
+  color: #dde3df;
+
+  text-decoration: none;
+
+  background:
+    rgba(4, 20, 23, 0.90);
+
+  border:
+    1px solid rgba(195, 139, 70, 0.34);
+
+  border-radius: 9px;
+
+  transition: 0.2s;
+}
+
+.tabs a:hover {
+  color: #f2c684;
+
+  border-color: #b87738;
+}
+
+
+/* ------------------------------
+   PANELES
+------------------------------ */
+
+.panel {
+  margin-top: 14px;
+
+  padding: 23px;
+
+  background:
+    rgba(4, 20, 23, 0.88);
+
+  border:
+    1px solid rgba(192, 140, 75, 0.38);
+
+  border-radius: 13px;
+
+  backdrop-filter: blur(9px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.20);
+}
+
+.panel h2 {
+  margin-bottom: 18px;
+
+  color: #e4b779;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.55rem;
+}
+
+.panel p {
+  color: #d5dcda;
+
+  line-height: 1.65;
+
+  margin-bottom: 12px;
+}
+
+
+/* ------------------------------
+   TECNOLOGÍAS
+------------------------------ */
+
+.grid-tecnologias {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.grupo-tech {
+  padding: 17px;
+
+  border:
+    1px solid rgba(194, 137, 66, 0.32);
+
+  border-radius: 10px;
+
+  background:
+    rgba(8, 29, 32, 0.75);
+}
+
+.grupo-tech h3 {
+  margin-bottom: 12px;
+
+  color: #f0e1c6;
+}
+
+.tech-lista {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.tech-lista span {
+  padding: 7px 11px;
+
+  background:
+    rgba(30, 53, 56, 0.90);
+
+  border-radius: 6px;
+
+  color: #dadfdd;
+
+  font-size: 0.86rem;
+}
+
+
+/* ------------------------------
+   PROYECTOS
+------------------------------ */
+
+.proyectos-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.proyecto-card {
+  padding: 15px;
+
+  background:
+    rgba(7, 27, 30, 0.92);
+
+  border:
+    1px solid rgba(196, 138, 66, 0.37);
+
+  border-radius: 11px;
+}
+
+.proyecto-card h3 {
+  margin-bottom: 13px;
+
+  color: #f0d7aa;
+}
+
+.proyecto-card img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 8;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  margin-bottom: 14px;
+}
+
+.badges {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 14px;
+}
+
+.badges span {
+  padding: 5px 8px;
+
+  font-size: 0.76rem;
+
+  border-radius: 5px;
+
+  color: #eddcc1;
+
+  background:
+    rgba(41, 58, 59, 0.88);
+}
+
+.proyecto-botones {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 16px;
+}
+
+.proyecto-botones a {
+  flex: 1;
+
+  padding: 9px 10px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  border-radius: 7px;
+
+  color: #eedfc4;
+
+  border:
+    1px solid rgba(199, 141, 69, 0.50);
+
+  transition: 0.2s;
+}
+
+.proyecto-botones a:hover {
+  background: #a96e38;
+
+  color: #071517;
+}
+
+
+/* ------------------------------
+   APRENDIZAJE
+------------------------------ */
+
+.aprendiendo {
+  display: grid;
+
+  gap: 11px;
+}
+
+.aprendiendo span {
+  color: #ccd7d4;
+}
+
+
+/* ------------------------------
+   CONTACTO
+------------------------------ */
+
+.contacto {
+  text-align: center;
+}
+
+.contacto .perfil-botones {
+  justify-content: center;
+}
+
+.contacto .perfil-botones a {
+  flex: 0 1 190px;
+}
+
+
+/* ------------------------------
+   PIE DE PÁGINA
+------------------------------ */
+
+footer {
+  margin: 25px 0;
+
+  padding: 20px;
+
+  text-align: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  color: #d5a462;
+}
+
+
+/* ------------------------------
+   TABLET
+------------------------------ */
+
+@media (max-width: 1000px) {
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil {
+    text-align: center;
+  }
+
+  .datos-perfil {
+    text-align: left;
+  }
+
+  .chips {
+    justify-content: center;
+  }
+
+}
+
+
+/* ------------------------------
+   CELULAR
+------------------------------ */
+
 @media (max-width: 700px) {
+
   body {
     background-attachment: scroll;
   }
 
-  .banner {
-    width: 96%;
-    margin-top: 12px;
+  .barra-superior {
+    padding: 12px 4%;
+
+    flex-direction: column;
+
+    gap: 10px;
   }
 
-  .contenedor {
-    width: 96%;
-    padding-top: 16px;
-  }
-
-  .botones {
-    gap: 12px;
-  }
-
-  .botones a {
+  .menu {
     width: 100%;
-    min-width: 0;
+
+    overflow-x: auto;
   }
+
+  .menu a {
+    white-space: nowrap;
+
+    padding: 10px;
+  }
+
+  .layout {
+    width: 94%;
+
+    margin-top: 18px;
+  }
+
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tabs {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .grid-tecnologias {
+    grid-template-columns: 1fr;
+  }
+
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
