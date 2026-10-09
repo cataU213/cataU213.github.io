@@ -1,5 +1,5 @@
 /* =========================
-   CONFIGURACIÓN GENERAL
+   BASE GENERAL
 ========================= */
 
 * {
@@ -14,14 +14,17 @@ html {
 
 body {
   min-height: 100vh;
+
+  /* Fuente general */
   font-family: Arial, Helvetica, sans-serif;
+
   color: #eee5d5;
 
-  /* Fondo principal */
+  /* Fondo principal del portfolio */
   background:
     linear-gradient(
-      rgba(4, 15, 17, 0.76),
-      rgba(4, 15, 17, 0.86)
+      rgba(5, 18, 20, 0.78),
+      rgba(5, 18, 20, 0.88)
     ),
     url("./fondo.png");
 
@@ -33,204 +36,150 @@ body {
 
 
 /* =========================
-   BARRA SUPERIOR
-========================= */
-
-.barra-superior {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  width: 100%;
-  min-height: 64px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 4%;
-
-  background: rgba(4, 15, 18, 0.96);
-  border-bottom: 1px solid rgba(201, 139, 75, 0.35);
-
-  backdrop-filter: blur(10px);
-}
-
-.marca {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font-size: 1rem;
-  color: #f1e7d7;
-}
-
-.github-icon {
-  color: #d09a59;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.menu a {
-  padding: 20px 14px;
-
-  color: #d7dddb;
-  text-decoration: none;
-
-  border-bottom: 2px solid transparent;
-
-  transition: 0.2s;
-}
-
-.menu a:hover {
-  color: #e7bd82;
-  border-bottom-color: #c98543;
-}
-
-
-/* =========================
    ESTRUCTURA PRINCIPAL
 ========================= */
 
 .layout {
-  width: min(1450px, 96%);
-  margin: 26px auto 60px;
+  width: min(1400px, 96%);
+  margin: 30px auto;
 
   display: grid;
 
-  /* Perfil izquierda + contenido derecha */
-  grid-template-columns: 285px minmax(0, 1fr);
+  /* Columna izquierda + contenido derecho */
+  grid-template-columns: 290px 1fr;
 
   gap: 20px;
 }
 
 
 /* =========================
-   PERFIL LATERAL
+   PERFIL IZQUIERDO
 ========================= */
 
 .perfil {
   align-self: start;
 
-  padding: 22px;
+  padding: 24px;
 
-  background: rgba(5, 20, 23, 0.88);
+  background: rgba(6, 22, 25, 0.92);
 
-  border: 1px solid rgba(198, 138, 70, 0.45);
-  border-radius: 14px;
+  border: 1px solid rgba(196, 139, 70, 0.55);
 
-  backdrop-filter: blur(8px);
-
-  overflow: hidden;
-}
-
-/* Foto circular */
-.foto-perfil {
-  display: block;
-
-  width: 180px;
-  height: 180px;
-
-  margin: 0 auto 18px;
-
-  border-radius: 50%;
-
-  object-fit: cover;
-
-  border: 2px solid #c48948;
-}
-
-.perfil h1 {
-  margin-bottom: 4px;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
-
-  color: #edcf99;
-}
-
-.usuario {
-  margin-bottom: 18px;
-
-  color: #89989b;
-}
-
-.descripcion-perfil {
-  margin-bottom: 8px;
-
-  color: #f1e6d3;
-}
-
-.perfil p {
-  line-height: 1.5;
+  border-radius: 16px;
 }
 
 
 /* =========================
-   BOTONES PERFIL
+   FOTO DE PERFIL
 ========================= */
 
-.perfil-botones {
+.foto-contenedor {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 
-  gap: 10px;
-
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
-.perfil-botones a {
-  flex: 1;
+.foto-perfil {
+  width: 190px;
+  height: 190px;
 
-  min-width: 105px;
+  object-fit: cover;
+  object-position: center;
 
-  padding: 10px 14px;
+  border-radius: 50%;
+
+  border: 2px solid #c58a49;
+}
+
+
+/* =========================
+   NOMBRE Y DATOS
+========================= */
+
+.perfil h1 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 2rem;
+
+  color: #efd19c;
+
+  margin-bottom: 3px;
+}
+
+.usuario {
+  color: #8d9b9d;
+
+  margin-bottom: 18px;
+}
+
+.descripcion-perfil {
+  color: #f0e4d2;
+
+  line-height: 1.5;
+
+  margin-bottom: 8px;
+}
+
+.especialidad {
+  color: #cbd3d1;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   BOTÓN PERFIL
+========================= */
+
+.editar-perfil {
+  display: block;
+
+  margin: 22px 0;
+
+  padding: 11px;
 
   text-align: center;
 
   text-decoration: none;
 
-  color: #efddc0;
+  color: #efe3d1;
 
-  background: rgba(12, 32, 35, 0.92);
+  background: rgba(24, 42, 45, 0.92);
 
-  border: 1px solid rgba(198, 138, 69, 0.55);
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
 
-  transition: 0.25s;
+  border-radius: 7px;
+
+  transition: 0.2s;
 }
 
-.perfil-botones a:hover {
-  background: #b7783e;
-  color: #071517;
+.editar-perfil:hover {
+  border-color: #c58a49;
 
-  transform: translateY(-2px);
+  color: #f3c980;
 }
 
 
 /* =========================
-   DATOS PERFIL
+   DATOS DE CONTACTO
 ========================= */
 
 .datos-perfil {
-  padding: 15px 0;
+  padding: 17px 0;
 
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .datos-perfil p {
-  margin: 10px 0;
+  margin: 11px 0;
+
+  color: #cbd3d1;
 
   font-size: 0.9rem;
 
-  color: #cbd4d1;
-
-  word-break: break-word;
+  line-height: 1.4;
 }
 
 
@@ -243,35 +192,37 @@ body {
 }
 
 .intereses h3 {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
-  font-family: Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-  color: #d7a466;
+  color: #d9a765;
 }
 
 .chips {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 7px;
 }
 
 .chips span {
-  padding: 6px 10px;
+  padding: 6px 11px;
+
+  background: rgba(29, 49, 52, 0.95);
+
+  color: #dde2df;
+
+  border-radius: 18px;
 
   font-size: 0.8rem;
-
-  color: #dce3e1;
-
-  background: rgba(28, 49, 52, 0.88);
-
-  border-radius: 20px;
 }
 
 
 /* =========================
    CONTENIDO DERECHO
+   Por ahora queda vacío
 ========================= */
 
 .contenido {
@@ -280,372 +231,21 @@ body {
 
 
 /* =========================
-   BANNER
+   RESPONSIVE
 ========================= */
 
-.banner {
-  width: 100%;
-
-  overflow: hidden;
-
-  border: 1px solid rgba(199, 140, 71, 0.48);
-  border-radius: 13px;
-}
-
-.banner img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  object-fit: cover;
-}
-
-
-/* =========================
-   PESTAÑAS
-========================= */
-
-.tabs {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 10px;
-
-  margin: 14px 0;
-}
-
-.tabs a {
-  padding: 14px 10px;
-
-  text-align: center;
-
-  text-decoration: none;
-
-  color: #dce1df;
-
-  background: rgba(5, 21, 24, 0.92);
-
-  border: 1px solid rgba(197, 139, 70, 0.34);
-  border-radius: 9px;
-
-  transition: 0.2s;
-}
-
-.tabs a:hover {
-  color: #efc784;
-  border-color: #bb7a3d;
-}
-
-
-/* =========================
-   PANELES
-========================= */
-
-.panel {
-  margin-top: 14px;
-
-  padding: 22px;
-
-  background: rgba(5, 20, 23, 0.90);
-
-  border: 1px solid rgba(193, 137, 69, 0.38);
-  border-radius: 13px;
-
-  backdrop-filter: blur(8px);
-}
-
-.panel h2 {
-  margin-bottom: 17px;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
-
-  color: #e2b475;
-}
-
-.panel p {
-  margin-bottom: 12px;
-
-  line-height: 1.65;
-
-  color: #d3dcda;
-}
-
-
-/* =========================
-   TECNOLOGÍAS
-========================= */
-
-.grid-tecnologias {
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 12px;
-}
-
-.grupo-tech {
-  padding: 16px;
-
-  background: rgba(9, 29, 32, 0.78);
-
-  border: 1px solid rgba(194, 137, 66, 0.31);
-  border-radius: 10px;
-}
-
-.grupo-tech h3 {
-  margin-bottom: 12px;
-
-  color: #efe0c6;
-}
-
-.tech-lista {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 8px;
-}
-
-.tech-lista span {
-  padding: 7px 10px;
-
-  font-size: 0.84rem;
-
-  color: #dce1df;
-
-  background: rgba(31, 52, 54, 0.92);
-
-  border-radius: 6px;
-}
-
-
-/* =========================
-   PROYECTOS
-========================= */
-
-.proyectos-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 16px;
-}
-
-.proyecto-card {
-  padding: 15px;
-
-  background: rgba(7, 27, 30, 0.94);
-
-  border: 1px solid rgba(196, 138, 67, 0.37);
-  border-radius: 11px;
-
-  overflow: hidden;
-}
-
-.proyecto-card h3 {
-  margin-bottom: 12px;
-
-  color: #efd6a7;
-}
-
-.proyecto-card img {
-  display: block;
-
-  width: 100%;
-  height: 190px;
-
-  object-fit: cover;
-
-  margin-bottom: 14px;
-
-  border-radius: 8px;
-}
-
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 6px;
-
-  margin-top: 13px;
-}
-
-.badges span {
-  padding: 5px 8px;
-
-  font-size: 0.75rem;
-
-  color: #ebdcc3;
-
-  background: rgba(40, 57, 58, 0.9);
-
-  border-radius: 5px;
-}
-
-.proyecto-botones {
-  display: flex;
-
-  gap: 8px;
-
-  margin-top: 15px;
-}
-
-.proyecto-botones a {
-  flex: 1;
-
-  padding: 9px;
-
-  text-align: center;
-
-  text-decoration: none;
-
-  color: #ecddc4;
-
-  border: 1px solid rgba(199, 141, 69, 0.5);
-  border-radius: 7px;
-
-  transition: 0.2s;
-}
-
-.proyecto-botones a:hover {
-  background: #a96e38;
-  color: #071517;
-}
-
-
-/* =========================
-   APRENDIZAJE
-========================= */
-
-.aprendiendo {
-  display: grid;
-
-  gap: 10px;
-}
-
-.aprendiendo span {
-  color: #ccd6d3;
-}
-
-
-/* =========================
-   CONTACTO
-========================= */
-
-.contacto {
-  text-align: center;
-}
-
-.contacto .perfil-botones {
-  justify-content: center;
-}
-
-.contacto .perfil-botones a {
-  flex: 0 1 180px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  margin: 24px 0;
-
-  padding: 20px;
-
-  text-align: center;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  color: #d2a260;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
   .layout {
     grid-template-columns: 1fr;
   }
 
   .perfil {
-    text-align: center;
-  }
+    max-width: 420px;
 
-  .datos-perfil {
-    text-align: left;
-  }
+    margin: 0 auto;
 
-  .chips {
-    justify-content: center;
-  }
-
-}
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 700px) {
-
-  body {
-    background-attachment: scroll;
-  }
-
-  .barra-superior {
-    position: static;
-
-    flex-direction: column;
-
-    gap: 10px;
-
-    padding: 12px 4%;
-  }
-
-  .menu {
     width: 100%;
-
-    overflow-x: auto;
-  }
-
-  .menu a {
-    white-space: nowrap;
-
-    padding: 10px;
-  }
-
-  .layout {
-    width: 94%;
-
-    margin-top: 18px;
-  }
-
-  .foto-perfil {
-    width: 145px;
-    height: 145px;
-  }
-
-  .tabs {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-tecnologias {
-    grid-template-columns: 1fr;
-  }
-
-  .proyectos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .proyecto-card img {
-    height: auto;
   }
 
 }
