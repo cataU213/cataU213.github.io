@@ -24,7 +24,7 @@ body {
 
 /* Banner principal */
 .banner {
-  width: min(1180px, 94%);
+  width: min(900px, 90%);
   margin: 24px auto 0;
 }
 
@@ -34,6 +34,9 @@ body {
   width: 100%;
   height: auto;
 
+  border: 1px solid rgba(218, 173, 103, 0.45);
+  border-radius: 14px;
+}
   /* Bordes suaves para integrarlo con el diseño */
   border: 1px solid rgba(218, 173, 103, 0.45);
   border-radius: 14px;
