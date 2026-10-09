@@ -1,81 +1,176 @@
-/* Columna izquierda del perfil */
+/* =========================
+   BASE GENERAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  /* Fuente general */
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #eee5d5;
+
+  /* Fondo principal del portfolio */
+  background:
+    linear-gradient(
+      rgba(5, 18, 20, 0.78),
+      rgba(5, 18, 20, 0.88)
+    ),
+    url("./fondo.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   ESTRUCTURA PRINCIPAL
+========================= */
+
+.layout {
+  width: min(1400px, 96%);
+  margin: 30px auto;
+
+  display: grid;
+
+  /* Columna izquierda + contenido derecho */
+  grid-template-columns: 290px 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   PERFIL IZQUIERDO
+========================= */
+
 .perfil {
   align-self: start;
+
   padding: 24px;
 
-  background: rgba(4, 18, 21, 0.92);
-  border: 1px solid rgba(198, 138, 70, 0.55);
+  background: rgba(6, 22, 25, 0.92);
+
+  border: 1px solid rgba(196, 139, 70, 0.55);
+
   border-radius: 16px;
 }
 
-/* Espacio de la fotografía */
+
+/* =========================
+   FOTO DE PERFIL
+========================= */
+
 .foto-contenedor {
   display: flex;
   justify-content: center;
-  margin-bottom: 18px;
+
+  margin-bottom: 20px;
 }
 
-/* Foto real circular */
 .foto-perfil {
   width: 190px;
   height: 190px;
 
+  /* Mantiene el círculo lleno */
   object-fit: cover;
-  object-position: center;
+
+  /*
+    Desplaza el encuadre hacia la izquierda
+    y un poco hacia arriba para mostrar mejor tu rostro
+  */
+  object-position: 28% 35%;
 
   border-radius: 50%;
-  border: 2px solid #c68a49;
+
+  border: 2px solid #c58a49;
 }
 
-/* Nombre */
+
+/* =========================
+   NOMBRE Y DATOS
+========================= */
+
 .perfil h1 {
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: 2rem;
 
-  color: #efd09a;
-  margin-bottom: 2px;
+  color: #efd19c;
+
+  margin-bottom: 3px;
 }
 
-/* Usuario */
 .usuario {
-  color: #89999b;
+  color: #8d9b9d;
+
   margin-bottom: 18px;
 }
 
-/* Descripción */
 .descripcion-perfil {
-  color: #eee4d3;
+  color: #f0e4d2;
+
   line-height: 1.5;
-  margin-bottom: 7px;
+
+  margin-bottom: 8px;
 }
 
 .especialidad {
-  color: #ccd4d1;
+  color: #cbd3d1;
+
   line-height: 1.6;
 }
 
-/* Botón tipo GitHub */
+
+/* =========================
+   BOTÓN PERFIL
+========================= */
+
 .editar-perfil {
   display: block;
 
   margin: 22px 0;
+
   padding: 11px;
 
   text-align: center;
+
   text-decoration: none;
 
-  color: #eee4d2;
-  background: rgba(25, 43, 46, 0.9);
+  color: #efe3d1;
+
+  background: rgba(24, 42, 45, 0.92);
 
   border: 1px solid rgba(255, 255, 255, 0.10);
+
   border-radius: 7px;
+
+  transition: 0.2s;
 }
 
 .editar-perfil:hover {
-  border-color: #c68a49;
+  border-color: #c58a49;
+
+  color: #f3c980;
 }
 
-/* Ubicación, correo y GitHub */
+
+/* =========================
+   DATOS DE CONTACTO
+========================= */
+
 .datos-perfil {
   padding: 17px 0;
 
@@ -85,11 +180,19 @@
 
 .datos-perfil p {
   margin: 11px 0;
-  color: #ccd3d1;
+
+  color: #cbd3d1;
+
   font-size: 0.9rem;
+
+  line-height: 1.4;
 }
 
-/* Intereses */
+
+/* =========================
+   INTERESES
+========================= */
+
 .intereses {
   margin-top: 20px;
 }
@@ -98,21 +201,56 @@
   margin-bottom: 14px;
 
   font-family: Georgia, "Times New Roman", serif;
-  color: #dca765;
+
+  color: #d9a765;
 }
 
 .chips {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 7px;
 }
 
 .chips span {
   padding: 6px 11px;
 
-  background: rgba(30, 50, 53, 0.95);
+  background: rgba(29, 49, 52, 0.95);
+
   color: #dde2df;
 
   border-radius: 18px;
+
   font-size: 0.8rem;
+}
+
+
+/* =========================
+   CONTENIDO DERECHO
+========================= */
+
+.contenido {
+  min-width: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil {
+    max-width: 420px;
+
+    margin: 0 auto;
+
+    width: 100%;
+  }
+
 }
