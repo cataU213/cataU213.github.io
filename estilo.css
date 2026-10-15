@@ -915,3 +915,53 @@ footer {
     transform: scale(1.10);
     background: rgba(255, 255, 255, 0.08);
 }
+
+/* Contenedor de iconos */
+.tech-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+}
+
+/* El propio icono funciona como botón */
+.tech-icono {
+    width: 64px;
+    height: 64px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+/* Todos los logos mantienen el mismo tamaño */
+.tech-icono img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+    display: block;
+}
+
+/* Para REST API y SQL */
+.tech-emoji {
+    font-size: 36px;
+}
+
+/* Efecto al pasar el mouse */
+.tech-icono:hover {
+    transform: scale(1.12);
+    background: rgba(255, 255, 255, 0.08);
+}
