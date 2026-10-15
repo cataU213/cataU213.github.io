@@ -998,3 +998,63 @@ footer {
   color: white;
   text-decoration: none;
 }
+
+.tech-icono {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-icono:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
+}
+
+.tech-icono img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.icono-claro {
+  filter: brightness(0) invert(1);
+}
+
+.icono-texto {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hace visible el logo de Express sobre fondo oscuro */
+.icono-claro {
+    filter: brightness(0) invert(1);
+}
+
+/* Hace más visible el botón REST API */
+.icono-texto {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+/* Texto visible para tecnologías sin icono claro */
+.icono-texto {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hace más visible Git sin perder su color original */
+.git-destacado {
+    background: rgba(255, 255, 255, 0.08);
+}
