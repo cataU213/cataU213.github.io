@@ -965,3 +965,36 @@ footer {
     transform: scale(1.12);
     background: rgba(255, 255, 255, 0.08);
 }
+.tech-icono {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-icono:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
+}
+
+.tech-icono img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.icono-claro {
+  filter: brightness(0) invert(1);
+}
+
+.icono-texto {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
