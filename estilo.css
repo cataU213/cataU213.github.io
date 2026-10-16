@@ -1227,3 +1227,93 @@ footer {
         font-size: clamp(1rem, 4vw, 1.5rem);
     }
 }
+
+/* =========================================================
+   NOMBRE GOTICO INTEGRADO SOBRE VIDEO - SIN TARJETA
+   Estas reglas reemplazan solo el aspecto de la portada.
+   ========================================================= */
+.banner-animado .texto-portada.texto-portada-gotica {
+    /* Capa transparente sobre el video, a la derecha */
+    position: absolute;
+    z-index: 2;
+    top: 28%;
+    right: 2%;
+    left: auto;
+    width: 46%;
+    padding: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    background: transparent;
+    background-image: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    pointer-events: none;
+}
+
+/* Nombre gótico en oro antiguo */
+.banner-animado .texto-portada-gotica h2 {
+    font-family: "UnifrakturCook", Georgia, serif;
+    font-size: clamp(1.35rem, 3.7vw, 3.6rem);
+    line-height: 1.06;
+    margin: 0 0 0.18em;
+    font-weight: 700;
+    color: #e9bf7b;
+    text-shadow: 0 2px 3px rgba(12, 18, 23, .85), 0 0 9px rgba(220, 163, 86, .35);
+}
+
+/* Filigranas florales, luna y estrellas */
+.banner-animado .texto-portada-gotica .ornamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45em;
+    white-space: nowrap;
+    color: #dfae6b;
+    font-family: Georgia, serif;
+    font-size: clamp(.7rem, 1.55vw, 1.5rem);
+    line-height: 1.1;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .8);
+}
+
+.banner-animado .texto-portada-gotica .luna {
+    font-size: 1.9em;
+    line-height: .9;
+}
+
+.banner-animado .texto-portada-gotica .ornamento-central,
+.banner-animado .texto-portada-gotica .ornamento-inferior {
+    font-size: clamp(.6rem, 1.15vw, 1.05rem);
+}
+
+/* Subtítulos legibles sin recuadro */
+.banner-animado .texto-portada-gotica p {
+    color: #f0d9b1;
+    font-family: Georgia, serif;
+    font-size: clamp(.55rem, 1vw, .98rem);
+    line-height: 1.25;
+    margin: .2em 0;
+    text-shadow: 0 1px 4px #09131b, 0 2px 7px #09131b;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 700px) {
+    .banner-animado .texto-portada.texto-portada-gotica {
+        top: 29%;
+        right: 1%;
+        width: 52%;
+        padding: 0;
+    }
+    .banner-animado .texto-portada-gotica h2 {
+        font-size: clamp(.95rem, 4vw, 1.6rem);
+    }
+    .banner-animado .texto-portada-gotica .ornamento {
+        font-size: clamp(.52rem, 2.1vw, .8rem);
+        gap: .2em;
+    }
+    .banner-animado .texto-portada-gotica p {
+        font-size: clamp(.42rem, 1.4vw, .65rem);
+    }
+}
