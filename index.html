@@ -92,7 +92,7 @@
     </p>
 
     <!-- Abre LinkedIn -->
-    <p>
+   <p>
         💼
         <a href="https://www.linkedin.com/in/akira-starr-30065834a/"
            target="_blank"
@@ -121,12 +121,24 @@
     <section class="contenido">
 
       <!-- Banner -->
-      <section class="banner">
-        <img
-          src="./portada_B.png"
-          alt="Banner de Cata Ullon"
-        >
-      </section>
+      <!-- Portada animada del portafolio -->
+<section class="banner banner-animado">
+
+  <!-- Video en bucle y sin sonido -->
+  <video autoplay muted loop playsinline
+         poster="./portada_B.png"
+         class="video-portada">
+    <source src="./portada_animada%20(1).mp4" type="video/mp4">
+  </video>
+
+  <!-- Nombre y descripción sobre la animación -->
+  <div class="texto-portada">
+    <h2>Catalina Ullón Colina</h2>
+    <p>Estudiante de Ingeniería Informática</p>
+    <p>Frontend · Full Stack · Bases de Datos · APIs</p>
+  </div>
+
+</section>
 
 
       <!-- Navegación interna -->
