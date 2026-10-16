@@ -1113,6 +1113,11 @@ footer {
     filter: none; /* Respeta la iluminación original */
      background-color: #081522;
     clip-path: inset(5px 0 0 0);
+    /* Oculta la franja superior del video */
+    clip-path: inset(5% 0 0 0);
+    /* Mantiene los colores originales */
+    filter: none;
+
 }
 
 /* Texto dorado sobre el lado derecho */
