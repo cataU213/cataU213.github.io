@@ -1441,3 +1441,30 @@ footer {
 }
 
 
+/* ==========================================
+   CORRECCIÓN: SOLO TEXTOS INFERIORES
+   No modifica el nombre Cata Ullon
+   ========================================== */
+
+/* Descripciones debajo del nombre */
+.banner-animado .texto-portada-gotica p {
+    /* Marfil claro para contrastar con el fondo */
+    color: #fff0d0;
+
+    /* Contorno oscuro para mejorar la lectura */
+    -webkit-text-stroke: 0.35px #172027;
+
+    font-weight: 700;
+
+    /* Sombra definida sobre la luna y el cielo */
+    text-shadow:
+        1px 1px 0 #172027,
+        -1px -1px 0 #172027,
+        1px -1px 0 #172027,
+        -1px 1px 0 #172027,
+        0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+
+
+
