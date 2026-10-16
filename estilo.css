@@ -1259,3 +1259,15 @@ footer {
 }
 
 
+/* Corrección final del banner */
+.banner-animado {
+    aspect-ratio: 16 / 9;
+}
+
+/* Video completo y con colores originales */
+.banner-animado .video-portada {
+    object-fit: contain;
+    object-position: center;
+    filter: none;
+}
+
