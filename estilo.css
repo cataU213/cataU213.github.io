@@ -1414,3 +1414,30 @@ footer {
     }
 }
 
+
+/* =====================================
+   COLOR MOSTAZA OSCURO PARA LA PORTADA
+   ===================================== */
+
+/* Nombre gótico en mostaza oscuro */
+.banner-animado .texto-portada-gotica h2 {
+    color: #806018;
+    -webkit-text-stroke: 0.5px #241b10;
+
+    /* Sombra discreta para separar las letras */
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Descripciones con el mismo tono mostaza */
+.banner-animado .texto-portada-gotica p {
+    color: #806018;
+    -webkit-text-stroke: 0.2px #241b10;
+    font-weight: 700;
+
+    /* Mantiene la lectura sin fondo de tarjeta */
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.65);
+}
+
+
