@@ -1058,3 +1058,58 @@ footer {
 .git-destacado {
     background: rgba(255, 255, 255, 0.08);
 }
+
+/* Contenedor del video y el texto */
+.banner-animado {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #081522;
+}
+
+/* Video con un poco más de luminosidad */
+.video-portada {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.20) contrast(1.05) saturate(1.15);
+}
+
+/* Texto dorado encima del video */
+.texto-portada {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  width: 45%;
+  text-align: center;
+  color: #f1c783;
+  text-shadow: 2px 3px 8px #000;
+}
+
+.texto-portada h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(1.3rem, 2.8vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.texto-portada p {
+  font-size: clamp(0.7rem, 1.2vw, 1.1rem);
+  margin-top: 8px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 700px) {
+  .texto-portada {
+    right: 3%;
+    width: 50%;
+  }
+
+  .texto-portada h2 {
+    font-size: 1.1rem;
+  }
+
+  .texto-portada p {
+    font-size: 0.65rem;
+  }
+}
