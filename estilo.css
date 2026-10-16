@@ -1186,3 +1186,59 @@ footer {
   }
 }
 
+
+/* ==========================================
+   PORTADA: DARK FANTASY + COZY WITCHCORE
+   ========================================== */
+
+/* Colores principales de la portada */
+:root {
+    --oro-antiguo: #B69A70;
+    --pergamino: #E6D6BB;
+    --noche: #14232A;
+}
+
+/* Suaviza los colores del dibujo animado */
+.banner-animado .video-portada {
+    filter:
+        brightness(1.08)
+        contrast(0.94)
+        saturate(0.72)
+        sepia(0.08);
+}
+
+/* Fondo discreto detrás del nombre */
+.banner-animado .texto-portada {
+    background: rgba(20, 35, 42, 0.68);
+    border: 1px solid rgba(182, 154, 112, 0.30);
+    color: var(--pergamino);
+}
+
+/* Nombre con tipografía gótica medieval */
+.banner-animado .texto-portada h2 {
+    font-family: "UnifrakturCook", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 2.5vw, 2.3rem);
+    line-height: 1.25;
+    color: var(--oro-antiguo);
+
+    /* Sombra suave para destacar las letras */
+    text-shadow:
+        1px 2px 3px rgba(0, 0, 0, 0.75),
+        0 0 8px rgba(182, 154, 112, 0.18);
+}
+
+/* Descripción con tono pergamino */
+.banner-animado .texto-portada p {
+    color: var(--pergamino);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* Ajuste del nombre para celulares */
+@media (max-width: 700px) {
+    .banner-animado .texto-portada h2 {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+}
+
+
