@@ -1123,16 +1123,22 @@ footer {
   background: #081522;
 }
 
-/* El video llena la portada sin deformarse */
-.banner-animado .video-portada {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left center;
 
-  /* Aclaramos ligeramente los colores */
-  filter: brightness(1.18) contrast(1.04) saturate(1.12);
+/* Video animado: estilo Dark Fantasy + Cozy Witchcore */
+.banner-animado .video-portada {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* Mantiene el video sin deformaciones */
+    object-fit: cover;
+    object-position: left center;
+
+    /* Suaviza los naranjas y reduce el contraste */
+    filter: brightness(0.98)
+            contrast(0.90)
+            saturate(0.48)
+            sepia(0.04);
 }
 
 /* Texto dorado sobre el lado derecho */
