@@ -1103,22 +1103,23 @@ footer {
     background: #081522;
 }
 
-/* Video completo sin recortes ni alteraciones de color */
+/* Video ajustado al borde superior del banner */
 .banner-animado .video-portada {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Muestra la imagen completa */
-    object-position: center;
-    filter: none; /* Respeta la iluminación original */
-     background-color: #081522;
-    clip-path: inset(5px 0 0 0);
-    /* Oculta la franja superior del video */
-    clip-path: inset(5% 0 0 0);
-    /* Mantiene los colores originales */
+
+    /* Llena el banner y evita franjas vacías */
+    object-fit: cover;
+    object-position: center top;
+
+    /* Conserva los colores originales */
     filter: none;
 
+    /* Elimina cualquier recorte anterior */
+    clip-path: none;
 }
+
 
 /* Texto dorado sobre el lado derecho */
 .banner-animado .texto-portada {
