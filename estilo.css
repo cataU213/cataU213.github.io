@@ -1353,3 +1353,64 @@ footer {
     color: #dfae6b;
 }
 
+
+/* ==========================================
+   PORTADA GÓTICA: CONTRASTE Y POSICIÓN
+   ========================================== */
+
+/* Aleja el texto de la zona más brillante de la luna */
+.banner-animado .texto-portada.texto-portada-gotica {
+    top: 24%;
+    right: 1%;
+    width: 39%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Nombre: marrón gótico con contorno oscuro */
+.banner-animado .texto-portada-gotica h2 {
+    color: #a66e35;
+    -webkit-text-stroke: 0.8px #211710;
+    font-size: clamp(1.2rem, 2.7vw, 2.8rem);
+
+    /* Sombra oscura para separar letras y luna */
+    text-shadow:
+        2px 2px 0 #211710,
+        -1px -1px 0 #211710,
+        0 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Descripciones: tono marfil con borde oscuro */
+.banner-animado .texto-portada-gotica p {
+    color: #f1dfc2;
+    font-weight: 700;
+    -webkit-text-stroke: 0.35px #171a1b;
+
+    text-shadow:
+        1px 1px 2px #111820,
+        -1px -1px 2px #111820,
+        0 2px 5px #111820;
+}
+
+/* Adornos: oro antiguo con sombra */
+.banner-animado .texto-portada-gotica .ornamento {
+    color: #c99650;
+    text-shadow:
+        1px 1px 2px #171717,
+        0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Ajustes para celulares */
+@media (max-width: 700px) {
+    .banner-animado .texto-portada.texto-portada-gotica {
+        top: 25%;
+        right: 1%;
+        width: 48%;
+    }
+
+    .banner-animado .texto-portada-gotica h2 {
+        font-size: clamp(0.95rem, 3.8vw, 1.5rem);
+    }
+}
+
