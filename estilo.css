@@ -1066,14 +1066,23 @@ footer {
   background: #081522;
 }
 
-/* Video con un poco más de luminosidad */
-.video-portada {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(1.20) contrast(1.05) saturate(1.15);
+/* Video animado: Dark Fantasy + Cozy Witchcore luminoso */
+.banner-animado .video-portada {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* Mantiene las proporciones del video */
+    object-fit: cover;
+    object-position: left center;
+
+    /* Iluminación cálida y colores naturales */
+    filter: brightness(1.18)
+            contrast(1.03)
+            saturate(0.95)
+            sepia(0.03);
 }
+
 
 /* Texto dorado encima del video */
 .texto-portada {
