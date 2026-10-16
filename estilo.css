@@ -1112,6 +1112,7 @@ footer {
     object-position: center;
     filter: none; /* Respeta la iluminación original */
      background-color: #081522;
+    clip-path: inset(5px 0 0 0);
 }
 
 /* Texto dorado sobre el lado derecho */
