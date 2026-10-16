@@ -1,7 +1,3 @@
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -1059,33 +1055,6 @@ footer {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* Contenedor del video y el texto */
-.banner-animado {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  background: #081522;
-}
-
-/* Video animado: Dark Fantasy + Cozy Witchcore luminoso */
-
-/* Video luminoso: Dark Fantasy + Cozy Witchcore */
-
-/* Video completo, sin recortes */
-.banner-animado .video-portada {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    /* Muestra toda la imagen sin deformarla */
-    object-fit: contain;
-    object-position: center;
-
-    /* Mantiene los colores originales del video */
-    filter: none;
-}
-
-
-
 /* Texto dorado encima del video */
 .texto-portada {
   position: absolute;
@@ -1125,31 +1094,23 @@ footer {
   }
 }
 
-/* PORTADA ANIMADA: tamaño y distribución */
+/* PORTADA ANIMADA: tamaño y distribución 16:9 */
 .banner-animado {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 2.5 / 1;
-  overflow: hidden;
-  background: #081522;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Misma proporción que el video */
+    overflow: hidden;
+    background: #081522;
 }
 
-
-/* Video animado: estilo Dark Fantasy + Cozy Witchcore */
+/* Video completo sin recortes ni alteraciones de color */
 .banner-animado .video-portada {
     display: block;
     width: 100%;
     height: 100%;
-
-    /* Mantiene el video sin deformaciones */
-    object-fit: cover;
-    object-position: left center;
-
-    /* Suaviza los naranjas y reduce el contraste */
-    filter: brightness(0.98)
-            contrast(0.90)
-            saturate(0.48)
-            sepia(0.04);
+    object-fit: contain; /* Muestra la imagen completa */
+    object-position: center;
+    filter: none; /* Respeta la iluminación original */
 }
 
 /* Texto dorado sobre el lado derecho */
@@ -1215,15 +1176,6 @@ footer {
     --noche: #14232A;
 }
 
-/* Suaviza los colores del dibujo animado */
-.banner-animado .video-portada {
-    filter:
-        brightness(1.08)
-        contrast(0.94)
-        saturate(0.72)
-        sepia(0.08);
-}
-
 /* Fondo discreto detrás del nombre */
 .banner-animado .texto-portada {
     background: rgba(20, 35, 42, 0.68);
@@ -1257,17 +1209,3 @@ footer {
         font-size: clamp(1rem, 4vw, 1.5rem);
     }
 }
-
-
-/* Corrección final del banner */
-.banner-animado {
-    aspect-ratio: 16 / 9;
-}
-
-/* Video completo y con colores originales */
-.banner-animado .video-portada {
-    object-fit: contain;
-    object-position: center;
-    filter: none;
-}
-
