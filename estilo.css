@@ -1111,6 +1111,7 @@ footer {
     object-fit: contain; /* Muestra la imagen completa */
     object-position: center;
     filter: none; /* Respeta la iluminación original */
+     background-color: #081522;
 }
 
 /* Texto dorado sobre el lado derecho */
@@ -1177,11 +1178,21 @@ footer {
 }
 
 /* Fondo discreto detrás del nombre */
+
+/* Fondo y posición de la tarjeta del nombre */
 .banner-animado .texto-portada {
+    /* Sube la tarjeta para descubrir la cara del gato */
+    top: 28%;
+
+    /* Conserva el centrado vertical de la tarjeta */
+    transform: translateY(-50%);
+
+    /* Mantiene el diseño original */
     background: rgba(20, 35, 42, 0.68);
     border: 1px solid rgba(182, 154, 112, 0.30);
     color: var(--pergamino);
 }
+
 
 /* Nombre con tipografía gótica medieval */
 .banner-animado .texto-portada h2 {
