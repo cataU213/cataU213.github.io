@@ -1317,3 +1317,39 @@ footer {
         font-size: clamp(.42rem, 1.4vw, .65rem);
     }
 }
+
+
+/* ==========================================
+   TEXTO GÓTICO CON MAYOR CONTRASTE
+   ========================================== */
+
+/* Nombre principal: marrón oscuro con borde dorado */
+.banner-animado .texto-portada-gotica h2 {
+    color: #38271f;
+
+    /* Contorno cálido para destacar sobre la luna */
+    -webkit-text-stroke: 0.6px #d5a15d;
+
+    /* Sombra suave para mejorar la profundidad */
+    text-shadow:
+        0 1px 2px rgba(245, 211, 151, 0.9),
+        1px 2px 3px rgba(12, 17, 20, 0.35);
+}
+
+/* Descripciones: marrón profundo y elegante */
+.banner-animado .texto-portada-gotica p {
+    color: #30231e;
+    font-weight: 700;
+
+    /* Borde claro para mantener la legibilidad */
+    -webkit-text-stroke: 0.2px #e2c69a;
+
+    text-shadow:
+        0 1px 2px rgba(242, 213, 167, 0.85);
+}
+
+/* Los adornos conservan su color dorado */
+.banner-animado .texto-portada-gotica .ornamento {
+    color: #dfae6b;
+}
+
